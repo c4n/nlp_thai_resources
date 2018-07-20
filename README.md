@@ -2,7 +2,7 @@
 Collection of Thai Natural Language Processing (NLP) software libraries, dictionaries, and corpus.
 Always welcome for pull requests.
 
-## Thai NLP Libraries
+## Thai NLP Libraries/Services
 
 ### Thai Character Cluster
 
@@ -11,6 +11,10 @@ Library | Description | Programming Languages | Features | License | Author & Li
 JTCC| Thai Character Cluster | Java | | GPL-3.0 | [Wittawat](https://github.com/wittawatj/jtcc)
 TCC | Thai Character Cluster | Python | | Apache 2.0 | [Wannaphong](https://github.com/wannaphongcom/pythainlp/blob/pythainlp1.4/pythainlp/tokenize/tcc.py)
 
+### Thai Sentiment Analysis
+Library | Description | Programming Languages | Features | License | Author & Link
+--- | --- | --- | --- | --- | ---
+sentiment_analysis_thai | | | || [JagerV3](https://github.com/JagerV3/sentiment_analysis_thai)
 
 ### Thai Soundex
 Library | Description | Programming Languages | Features | License | Author & Link
@@ -80,7 +84,7 @@ LK82 + Udom83 | Thai Soundex | Python | | | [Korakot](https://gist.github.com/ko
 <td>CutKum</td>
 <td>Thai Word-Segmentation with Deep Learning in Tensorflow. RNN.</td>
 <td>Python</td>
-<td>0.93 F-measure.</td>
+<td>93% F-measure.</td>
 <td>MIT</td>
 <td><a href="https://github.com/pucktada/cutkum">Pucktada, github</a></td>
 </tr>
@@ -88,7 +92,7 @@ LK82 + Udom83 | Thai Soundex | Python | | | [Korakot](https://gist.github.com/ko
 <td>Thai Language Toolkit (tltk)</td>
 <td> Based on a paper by Wirote Aroonmanakun in 2002. Word segmentation is based on a maximum collocation approach. Syllable segmentation is based on 3grams statistics. (Dataset is included)</td>
 <td>Python</td>
-<td>0.9786 F-measure. (It was tested on a different testset; it is not fair to compare it with other models.)</td>
+<td>97.86% F-measure. (It was tested on a different testset; it is not fair to compare it with other models.)</td>
 <td>GPLv3</td>
 <td><a href="https://pypi.python.org/pypi/tltk/"> awirote, the Python Package Index</a></td>
  </tr>
@@ -96,7 +100,7 @@ LK82 + Udom83 | Thai Soundex | Python | | | [Korakot](https://gist.github.com/ko
 <td>DeepCut</td>
 <td>A Thai word tokenization library using Deep Neural Network. CNN.</td>
 <td>Python</td>
-<td>0.988 F-measure.</td>
+<td>98.8% F-measure.</td>
 <td>MIT</td>
 <td><a href="https://github.com/rkcosmos/deepcut">rkcosmos, github</a></td>
 </tr>
@@ -104,7 +108,7 @@ LK82 + Udom83 | Thai Soundex | Python | | | [Korakot](https://gist.github.com/ko
 <td>SynThai</td>
 <td>Thai Word Segmentation and Part-of-Speech Tagging with Deep Learning. RNN. LSTM.</td>
 <td>Python</td>
-<td>0.992 F-measure.</td>
+<td>99.2% F-measure</td>
 <td>MIT</td>
 <td><a href="https://github.com/KenjiroAI/SynThai">KenjiroAI, github</a></td>
 </tr>
@@ -116,6 +120,15 @@ LK82 + Udom83 | Thai Soundex | Python | | | [Korakot](https://gist.github.com/ko
 <td>MIT</td>
  <td><a href="https://github.com/pureexe/cutthai">Pureexe/cutthai Github</a></td>
 </tr>
+<tr>
+ <td>Multi-Candidate-Word-Segmentation</td>
+ <td>Multi Candidate Word Segmentation for Thai language</td>
+ <td>Python, RNN, LSTM</td>
+ <td>97.0% F-measure (Word Level), 98.95% F-measure (Boundary Level)</td>
+ <td>MIT</td>
+ <td><a href="https://goo.gl/hdhbiR">Paper</a>, <a href="https://github.com/earthy123/Multi-Candidate-Word-Segmentation">earthy123/Multi-Candidate-Word-Segmentation</a><br></td>
+</tr>
+ 
 </tbody>
 </table>
 
@@ -148,6 +161,11 @@ Grammar Processing | Labelled Brackets -> Context Free Grammars (CFGs) | Python 
 Library | Description | Programming Languages | Features | License | Author & Link
 --- | --- | --- | --- | --- | ---
 kobkrit-word-embedding | Tensorflow implementation of Thai word embedding | Python | Source code, Example, Word distance graph | LGPL | [Kobkrit V.](https://github.com/kobkrit/tf-nlp-thai-word-embedding)
+
+### Thai Question Answering (Machine Comprehension)
+Service | Description | License | Author & Link
+--- | --- | --- | --- 
+Thai Machine Comprehension (ThaiMC) | Bidirectional Attention Flow | Copyright (As the service) | [iApp-AI](http://ai.iapp.co.th)
 
 ## Dictionaries / Translation Pairs
 Library | Description | Size | Features | License | Link
@@ -185,12 +203,13 @@ HSE Thai Corpus | Modern texts written in Thai language (mostly news websites) |
 Pre-trained Model | Description | Size | Dimensions | License | Link
 --- | --- | --- | --- | --- | ---
 fastText | Skip-Gram model trained on Wikipedia using fastText | | 300 | CC BY-SA 3.0 | [Facebook](https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md) + [Bin & Text](https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.th.zip) + [Text Only](https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.th.vec)
-thai2vec | AWS LSTM Language Model trained on Wikipedia. Perplexity of 46.61 with 51556 embeddings. | 147.6MB | 300 | MIT | [thai2vec](https://github.com/cstorm125/thai2vec) / [pyThaiNLP](https://github.com/PyThaiNLP/)
+thai2vec v0.2 | ULMFit on Wikipedia. Perplexity of 34.9 with 60,002 embeddings. | 70MB | 300 | MIT | [thai2vec](https://github.com/cstorm125/thai2vec) / [pyThaiNLP](https://github.com/PyThaiNLP/)
 
 ## Text Classification Benchmarks
 Model | Description | Dataset | Accuracy | License | Link
 --- | --- | --- | --- | --- | ---
-thai2vec | Finetuned AWS LSTM Language Model | [BEST](https://thailang.nectec.or.th/best/) | 94.4% | MIT | [thai2vec](https://github.com/cstorm125/thai2vec) / [pyThaiNLP](https://github.com/PyThaiNLP/)
+thai2vec v0.1 | ULMFit | [BEST](https://thailang.nectec.or.th/best/) | 94.4% | MIT | [thai2vec](https://github.com/cstorm125/thai2vec) / [pyThaiNLP](https://github.com/PyThaiNLP/)
+thai2vec v0.2 | ULMFit | [Wongnai Challenge](https://www.kaggle.com/c/wongnai-challenge-review-rating-prediction) | 62.7% | MIT | [thai2vec](https://github.com/cstorm125/thai2vec) / [pyThaiNLP](https://github.com/PyThaiNLP/)
 
 
 ## Not found? Try to look at another Thai NLP Awesome List/Resource (Like this one)
